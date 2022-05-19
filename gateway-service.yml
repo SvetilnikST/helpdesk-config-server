@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: history-service
+          uri: lb://history-service
+          predicates:
+            - Path=/api/**
+          filters:
+            - RemoveRequestHeader= Cookie,Set-Cookie
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
