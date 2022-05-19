@@ -35,3 +35,9 @@ keycloak:
   bearer-only: true
   credentials:
     secret: kQLLSS6xBgUTgwPgSGrWAVrWJtp7czGg
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
