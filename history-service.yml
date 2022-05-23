@@ -49,8 +49,8 @@ keycloak:
   credentials:
     secret: kQLLSS6xBgUTgwPgSGrWAVrWJtp7czGg
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
