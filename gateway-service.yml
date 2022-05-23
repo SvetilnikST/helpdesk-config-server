@@ -14,6 +14,12 @@ spring:
             - Path=/api/**
           filters:
             - RemoveRequestHeader= Cookie,Set-Cookie
+        - id: helpdesk-service
+            uri: lb://helpdesk-service
+            predicates:
+              - Path=/api/**
+            filters:
+              - RemoveRequestHeader= Cookie,Set-Cookie
 
 
 management:
