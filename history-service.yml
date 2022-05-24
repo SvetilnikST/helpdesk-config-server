@@ -29,8 +29,6 @@ spring:
     change-log: classpath:/db/changelog/db.changelog.xml
 
 eureka:
-  instance:
-    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
