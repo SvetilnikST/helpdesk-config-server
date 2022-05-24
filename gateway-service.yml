@@ -8,19 +8,24 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: history-service
+        - id: histories
           uri: lb://history-service
           predicates:
             - Path=/api/**
           filters:
             - RemoveRequestHeader= Cookie,Set-Cookie
-        - id: helpdesk-service
+        - id: tickets
             uri: lb://helpdesk-service
             predicates:
-              - Path=/api/**
+              - Path=/api/tickets/**
             filters:
               - RemoveRequestHeader= Cookie,Set-Cookie
-
+        - id: feedbacks
+            uri: lb://helpdesk-service
+            predicates:
+              - Path=/api/feedbacks/**
+            filters:
+              - RemoveRequestHeader= Cookie,Set-Cookie
 
 management:
   endpoints:
