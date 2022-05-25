@@ -13,19 +13,13 @@ spring:
         - id: histories
           uri: lb://history-service
           predicates:
-            - Path=/api/**
+            - Path=/histories-service/**
           filters:
             - RemoveRequestHeader= Cookie,Set-Cookie
-        - id: tickets
+        - id: helpdesk
           uri: lb://helpdesk-service
           predicates:
-            - Path=/api/tickets/**
-          filters:
-            - RemoveRequestHeader= Cookie,Set-Cookie
-        - id: feedbacks
-          uri: lb://helpdesk-service
-          predicates:
-            - Path=/api/feedbacks/**
+            - Path=/helpdesk-service/**
           filters:
             - RemoveRequestHeader= Cookie,Set-Cookie
 eureka:
