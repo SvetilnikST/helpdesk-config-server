@@ -28,12 +28,6 @@ services:
         - "8484:8080"
       depends_on:
         - postgres
-      links:
-        - "postgres:postgres"
-
-
-
-
 
   eureka-server:
     image: helpdesk/eureka-server
