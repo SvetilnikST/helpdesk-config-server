@@ -17,18 +17,17 @@ spring:
           filters:
             - RemoveRequestHeader= Cookie,Set-Cookie
         - id: tickets
-            uri: lb://helpdesk-service
-            predicates:
-              - Path=/api/tickets/**
-            filters:
-              - RemoveRequestHeader= Cookie,Set-Cookie
+          uri: lb://helpdesk-service
+          predicates:
+            - Path=/api/tickets/**
+          filters:
+            - RemoveRequestHeader= Cookie,Set-Cookie
         - id: feedbacks
-            uri: lb://helpdesk-service
-            predicates:
-              - Path=/api/feedbacks/**
-            filters:
-              - RemoveRequestHeader= Cookie,Set-Cookie
-
+          uri: lb://helpdesk-service
+          predicates:
+            - Path=/api/feedbacks/**
+          filters:
+            - RemoveRequestHeader= Cookie,Set-Cookie
 eureka:
   client:
     serviceUrl:
