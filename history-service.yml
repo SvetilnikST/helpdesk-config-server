@@ -38,14 +38,14 @@ eureka:
 
 
 keycloak:
-  realm: Helpdesk-gateway-app
+  realm: Helpdesk-app
   auth-server-url: http://localhost:8484/auth
   ssl-required: external
-  resource: helpdesk-gateway-client
+  resource: helpdesk-client
   use-resource-role-mappings: true
   bearer-only: true
   credentials:
-    secret: kQLLSS6xBgUTgwPgSGrWAVrWJtp7czGg
+    secret: spoOt2Wroh6K8aRxoGZQsw6iynunCSDR
 
 management:
   endpoints:
