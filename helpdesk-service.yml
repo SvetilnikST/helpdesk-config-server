@@ -27,6 +27,7 @@ spring:
 
 
 keycloak:
+  enabled: true
   realm: Helpdesk-app
   auth-server-url: http://localhost:8484/auth
   ssl-required: external
