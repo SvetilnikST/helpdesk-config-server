@@ -22,6 +22,11 @@ spring:
           format_sql: false
     liquibase:
       change-log: classpath:/db/changelog/db.changelog.xml
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8484/auth/realms/Helpdesk-app/protocol/openid-connect/certs
 
   profiles:
     active: development
