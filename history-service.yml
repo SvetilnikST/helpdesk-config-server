@@ -50,7 +50,7 @@ keycloak:
   use-resource-role-mappings: true
   bearer-only: true
   credentials:
-    secret: IYL2WSfKTIzYpSfYVohfEvs896fxqtlG
+    secret: 8DApMvwHDzxOULrdA8PUyp6pWrGIS9f1
 
 management:
   endpoints:
